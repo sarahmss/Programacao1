@@ -6,30 +6,36 @@
 /*   By: smodesto <smodesto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:29:59 by smodesto          #+#    #+#             */
-/*   Updated: 2021/10/14 18:21:56 by smodesto         ###   ########.fr       */
+/*   Updated: 2021/12/06 10:32:48 by smodesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exercicios.h"
+#include <iostream>
 
-/*Escrever um algoritmo para ler dois números. Se os números forem iguais imprimir a
-mensagem: “Números iguais” e encerrar a execução; caso contrário, imprimir o de maior
-valor, acompanhando pela mensagem “é maior número”*/
+/*	Tentando descobrir se um dado era viciado, um dono de cassino honesto 
+	o lançou n vezes. Dados os n resultados dos lançamentos, determinar o número
+	de ocorrências de cada face
+*/
  
 int main(void)
 {
-    int n1;
-    int n2;
-    
-    std::cout << "n1: \n";
-    std::cin >> n1;
-    std::cout << "n2: \n";
-    std::cin >> n2;
-    if  (n1 == n2)
-        std::cout << "Números iguais";
-    else if (n1 > n2)
-        std::cout << n1 << " é o maior número";
-    else if (n2 > n1)
-        std::cout << n2 << " é o maior número";
-    return (0);
- }
+	int n;
+	int i;
+	int	vet[6];
+	int	face;
+	
+	std::cout << "digite a quantidade de vezes que o dado foi lançado: ";
+	std::cin >> n;
+
+	for (i = 0; i < 6; i++)
+	    vet[i] = 0;
+    for (i = 0; i < n; i++)
+	{
+        std::cout << "digite a face do dado:";
+     	std::cin >> face;
+     	vet[face - 1]++;
+    }
+	for (i = 0; i < 6; i++)
+	    std::cout << "a face " << i + 1 << " caiu "  << vet[i] << " vezes \n";
+
+}

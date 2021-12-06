@@ -6,11 +6,10 @@
 #    By: smodesto <smodesto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/21 19:10:10 by smodesto          #+#    #+#              #
-#    Updated: 2021/09/21 19:13:53 by smodesto         ###   ########.fr        #
+#    Updated: 2021/12/06 13:05:33 by smodesto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILENAME = p1
-
+FILENAME = ex11
 all:	
-	g++ -Wall -Wextra -Werror $(FILENAME).cpp -o $(FILENAME)
+	g++  -g -Wall -Wextra -Werror $(FILENAME).cpp -o $(FILENAME)

@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.cpp                                           :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smodesto <smodesto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:29:59 by smodesto          #+#    #+#             */
-/*   Updated: 2021/12/06 09:54:40 by smodesto         ###   ########.fr       */
+/*   Updated: 2021/12/06 10:35:41 by smodesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*Dados dois vetores x e y, ambos com n elementos, determinar o produto escalar
+desses vetores.*/
 
 #include <iostream>
 #include <string.h>
 
-/*Faça um algoritmo que leia 10 salários. Depois de lidos e armazenados, mostre o maior valor.
-Utilize vetores*/
- 
-int main(void)
+int main (void)
 {
-    int    salarios[9];
-    int    i;
-    int    maior;
-    
-    i = 0;
-    std::cout << "Salarios:\n";
-    while (i <= 9)
-    {
-        std::cout << i + 1 << ". :";
-        std::cin >> salarios[i];
-        std::cout << "\n";
-        if (i == 0)
-            maior = salarios[0];
-        else if (maior < salarios[i]) 
-            maior = salarios[i];  
-        i++;
-    }
-    std::cout << "o maior salário:" << maior << "R$ \n";
-    return (0);
- }
+	int i, n;
+  float prod = 0;
+
+  std::cout << "Informe o tamanho dos vetores: ";
+  std::cin >> n;
+  float y[n];
+  float x[n];
+  std::cout << "Informe os componentes do vetor x: ";
+  for (i = 0; i < n; i++)
+    std::cin >> x[i];
+  std::cout << "Informe os componentes do vetor y: ";
+  for (i = 0; i < n; i++)
+    std::cin >> y[i];
+  for (i = 0; i < n; i++)
+    prod = prod + x[i] * y[i];
+  std::cout << "O produto escalar desses vetores: " << prod << "\n";
+  return (0);
+}
